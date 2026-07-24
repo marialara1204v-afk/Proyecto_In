@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" role="img" aria-labelledby="title">
+  <title>Logo La Patrona</title>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="220" fill="none"/>
+  <g transform="translate(24,22)">
+    <circle cx="76" cy="86" r="62" fill="url(#g)" opacity="0.2"/>
+    <path d="M60 132c-7-10-10-22-10-35 0-30 23-52 52-52 16 0 30 7 40 18-7 1-13 4-19 8 10 7 16 18 16 31 0 21-17 38-38 38h-4c-2 10-10 18-20 18-8 0-14-5-17-12z" fill="#f59e0b"/>
+    <path d="M103 84c7 0 13 6 13 13s-6 13-13 13-13-6-13-13 6-13 13-13z" fill="#fff" opacity="0.95"/>
+  </g>
+  <text x="178" y="90" font-family="'Segoe Script', 'Brush Script MT', cursive" font-size="64" fill="#f8fafc">La Patrona</text>
+  <text x="182" y="128" font-family="'DM Sans', Arial, sans-serif" font-size="24" fill="#64748b" letter-spacing="2">SISTEMA DE GESTION</text>
+</svg>

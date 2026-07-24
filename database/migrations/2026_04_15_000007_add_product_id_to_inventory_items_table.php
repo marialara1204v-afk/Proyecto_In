@@ -1,0 +1,28 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::table('inventory_items', function (Blueprint $table) {
+            // Agregar FK a products (opcional, puede estar NULL para incontables sin producto)
+            $table->foreignId('product_id')
+                  ->nullable()
+                  ->after('id')
+                  ->constrained()
+                  ->restrictOnDelete();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::table('inventory_items', function (Blueprint $table) {
+            $table->dropForeignIdFor('products');
+            $table->dropColumn('product_id');
+        });
+    }
+};

@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'Playfair Display', ui-serif, Georgia, serif;
+
+    /* ── Paleta DineNos: fondos oscuros elegantes ── */
+    --color-patrona-950: #0a0a0a;
+    --color-patrona-900: #0d0d0d;
+    --color-patrona-850: #111111;
+    --color-patrona-800: #161616;
+    --color-patrona-700: #1e1e1e;
+    --color-patrona-600: #2a2a2a;
+    --color-patrona-500: #3a3a3a;
+    --color-patrona-400: #5a5a5a;
+    --color-patrona-300: #8a8a8a;
+    --color-patrona-200: #b0b0b0;
+    --color-patrona-100: #e8e4df;
+    --color-patrona-50:  #f5f0eb;
+
+    /* ── Acentos dorados gastronomicos (DineNos) ── */
+    --color-copper-700: #8b6914;
+    --color-copper-600: #a47d1a;
+    --color-copper-500: #c89d54;
+    --color-copper-400: #d4a359;
+    --color-copper-300: #e0b96e;
+    --color-copper-200: #ecd4a0;
+    --color-copper-100: #f5e8cc;
+
+    /* ── Estado ── */
+    --color-olive-600: #3d5a35;
+    --color-olive-500: #4a7a40;
+    --color-olive-400: #5a9a50;
+
+    --color-wine-600: #6b2028;
+    --color-wine-500: #8b3040;
+    --color-wine-400: #a84050;
+}
