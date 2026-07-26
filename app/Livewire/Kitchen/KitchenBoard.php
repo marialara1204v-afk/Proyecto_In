@@ -110,16 +110,26 @@ class KitchenBoard extends Component
 
         if (! $next) return;
 
-        DB::transaction(function () use ($order, $next) {
+        DB::transaction(function () use ($order, $next, $userRole) {
             $order->update(['status' => $next]);
 
             if ($next === 'listo') {
-                $order->items()->update([
-                    'item_status' => 'listo',
-                    'prepared_at' => now(),
-                ]);
-                $order->table->update(['status' => 'pedido_listo']);
-                $this->dispatch('order-ready', tableNumber: $order->table->number, orderId: $order->id);
+                $userDestination = $userRole === 'bartender' ? 'bartender' : 'cocina';
+
+                $order->items()
+                    ->where('destination', $userDestination)
+                    ->where('item_status', '!=', 'listo')
+                    ->update([
+                        'item_status' => 'listo',
+                        'prepared_at' => now(),
+                    ]);
+
+                $order->refresh()->load('items');
+
+                if ($order->items->every('item_status', 'listo')) {
+                    $order->table->update(['status' => 'pedido_listo']);
+                    $this->dispatch('order-ready', tableNumber: $order->table->number, orderId: $order->id);
+                }
             }
         });
 

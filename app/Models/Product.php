@@ -56,6 +56,7 @@ class Product extends Model
     public function isDrink(): bool
     {
         $drinkCategories = [
+            'Bebidas',
             'Bebidas Calientes',
             'Bebidas Frías',
             'Coctelería Sin Alcohol',

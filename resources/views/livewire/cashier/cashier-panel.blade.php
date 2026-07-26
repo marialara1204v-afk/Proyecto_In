@@ -2,7 +2,7 @@
 
     {{-- Boton Volver al Dashboard --}}
     <div class="mb-4">
-        <a href="{{ route('admin.dashboard') }}" class="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-400 text-patrona-950 font-bold py-2 px-4 rounded-xl transition-all duration-200">
+        <a href="{{ route(auth()->user()->dashboardRoute()) }}" class="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-400 text-patrona-950 font-bold py-2 px-4 rounded-xl transition-all duration-200">
             &larr; Volver al Dashboard
         </a>
     </div>

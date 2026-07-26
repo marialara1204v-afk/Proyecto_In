@@ -6,7 +6,7 @@
             <h2 class="text-2xl font-black text-white">Registro de Auditoría</h2>
             <p class="text-patrona-500 text-sm">Historial de cambios en el sistema</p>
         </div>
-        <a href="{{ route('admin.dashboard') }}"
+        <a href="{{ route(auth()->user()->dashboardRoute()) }}"
            class="bg-patrona-800 hover:bg-patrona-700 text-gray-300 font-bold px-4 py-2.5 rounded-xl transition-colors text-sm">
             ← Volver
         </a>

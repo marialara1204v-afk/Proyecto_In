@@ -1,7 +1,7 @@
 <div class="space-y-6">
     {{-- Botón Volver al Dashboard --}}
     <div class="flex gap-2">
-        <a href="{{ route('admin.dashboard') }}" 
+        <a href="{{ route(auth()->user()->dashboardRoute()) }}" 
            class="inline-flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
             ← Volver al Dashboard
         </a>

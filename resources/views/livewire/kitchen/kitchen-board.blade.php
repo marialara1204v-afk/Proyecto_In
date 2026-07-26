@@ -66,6 +66,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             @foreach ($this->orders as $order)
                 @php
+                    $elapsed = $order->created_at->diffForHumans();
                     $mins = now()->diffInMinutes($order->created_at);
                     $urgent = $mins >= 15;
                     $isPending = $order->status === 'pendiente';
@@ -110,7 +111,7 @@
                         {{-- Tiempo --}}
                         <div class="text-right">
                             <div class="font-bold text-xl {{ $urgent ? 'text-wine-400' : 'text-patrona-300' }}">
-                                {{ $mins }}'
+                                {{ $elapsed }}
                             </div>
                             @if ($urgent)
                                 <div class="text-xs text-wine-400 font-bold uppercase">Retraso</div>

@@ -9,7 +9,7 @@
 <body class="bg-patrona-950 min-h-screen text-white">
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-6">
-            <a href="{{ route('admin.dashboard') }}" class="inline-flex items-center gap-2 bg-copper-600 hover:bg-copper-700 text-white font-bold py-2 px-4 rounded-xl transition">
+            <a href="{{ route(auth()->user()->dashboardRoute()) }}" class="inline-flex items-center gap-2 bg-copper-600 hover:bg-copper-700 text-white font-bold py-2 px-4 rounded-xl transition">
                 ← Volver al Dashboard
             </a>
         </div>
@@ -128,7 +128,7 @@
         </section>
 
         <div class="flex justify-end">
-            <a href="{{ route('admin.dashboard') }}" class="bg-patrona-900 border border-patrona-700 hover:border-copper-500 text-gray-300 hover:text-white font-bold px-5 py-2.5 rounded-xl transition-colors">Volver al dashboard</a>
+            <a href="{{ route(auth()->user()->dashboardRoute()) }}" class="bg-patrona-900 border border-patrona-700 hover:border-copper-500 text-gray-300 hover:text-white font-bold px-5 py-2.5 rounded-xl transition-colors">Volver al dashboard</a>
         </div>
     </main>
 </body>
